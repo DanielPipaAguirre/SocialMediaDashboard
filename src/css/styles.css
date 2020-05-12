@@ -40,6 +40,7 @@ body {
     font-family: var(--font-family);
     font-size: 1rem;
     margin: 0;
+    color: var(--text-primary-light);
 }
 
 a:link {
@@ -50,4 +51,83 @@ ul {
     list-style: none;
     margin: 0;
     padding: 0;
+}
+
+h1,
+h2 {
+    color: var(--text-dark-light);
+}
+
+h3 {
+    font-size: 1.071rem;
+}
+
+input[type=checkbox]{
+    margin: 0;
+}
+
+/* Module: header */
+.header {
+    background: var(--bg-top-light);
+    padding: 3em 0 5.714em;
+    border-radius: 0 0 20px 20px;
+}
+.header__title {
+    font-size: 1.714em;
+    margin: 0;
+}
+.header__description {
+    margin:  .5em 0;
+    padding-bottom: 1.571em;
+    border-bottom: 1px solid var(--text-primary-light);
+}
+
+/* Module: container */
+.container {
+    padding: 0 1.785em;
+}
+
+/* Module: dark-mode */
+.dark-mode {
+    margin-top: 1.071em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.dark-mode__title {
+    margin: 0;
+}
+/* Module: toggle */
+.toggle__checkbox {
+    position: absolute;
+    opacity: 0;
+}
+.toggle__checkbox:checked + .toggle__label {
+    background: var(--toggle-dark);
+}
+.toggle__checkbox:checked + .toggle__label::after {
+    background: var(--bg-top-dark);
+    transform: translateX(-23px);
+}
+.toggle__label {
+    display: block;
+    width: 47px;
+    height: 24px;
+    background: var(--toggle-light);
+    border-radius: 20px;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+}
+.toggle__label::after {
+    content: "";
+    width: 18px;
+    height: 18px;
+    background: var(--bg-light);
+    border-radius: 50px;
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    transition: .3s;
+    will-change: transform;
 }
