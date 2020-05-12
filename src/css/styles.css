@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+:root {
+    /* ## Colors */
+    /* --> primary */
+    --lime-green: hsl(163, 72%, 41%);
+    --bright-red: hsl(356, 69%, 56%);
+    --facebook-color: hsl(195, 100%, 50%);
+    --twitter-color: hsl(203, 89%, 53%);
+    --instagram-color: linear-gradient(to right,hsl(37, 97%, 70%),hsl(329, 70%, 58%));
+    --youTube-color: hsl(348, 97%, 39%);
+    --toggle-dark: linear-gradient(to right,hsl(210, 78%, 56%),hsl(146, 68%, 55%));
+    --toggle-light: hsl(230, 22%, 74%);
+    /* --> neutral */
+    --bg-dark: hsl(230, 17%, 14%);
+    --bg-top-dark: hsl(232, 19%, 15%);
+    --bg-card-dark: hsl(228, 28%, 20%);
+    --text-primary-dark: hsl(228, 34%, 66%);
+    --text-light-dark: hsl(0, 0%, 100%);
+    --bg-light: hsl(0, 0%, 100%);
+    --bg-top-light: hsl(225, 100%, 98%);
+    --bg-card-light: hsl(227, 47%, 96%);
+    --text-primary-light: hsl(228, 12%, 44%);
+    --text-dark-light: hsl(230, 17%, 14%);
+    /* ## Typography */
+    --font-family: 'Inter', sans-serif;
+    --font-regular: 400;
+    --font-bold: 700;
+    box-sizing: border-box;
+    font-size: .875em;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: var(--font-family);
+    font-size: 1rem;
+    margin: 0;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
