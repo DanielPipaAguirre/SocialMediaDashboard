@@ -15,6 +15,7 @@
     --bg-light: hsl(0, 0%, 100%);
     --bg-top-light: hsl(225, 100%, 98%);
     --bg-card-light: hsl(227, 47%, 96%);
+    --bg-card-hover: hsl(227, 47%, 92%);
     --text-primary-light: hsl(228, 12%, 44%);
     --text-dark-light: hsl(230, 17%, 14%);
     /* ## Typography */
@@ -46,6 +47,7 @@ body.is-dark {
     --bg-card-light: hsl(228, 28%, 20%);
     --text-primary-light: hsl(228, 34%, 66%);
     --text-dark-light: hsl(0, 0%, 100%);
+    --bg-card-hover: hsl(228, 28%, 24%)
 }
 
 a:link {
@@ -149,6 +151,11 @@ input[type=checkbox]{
     border-radius: 10px;
     position: relative;
     overflow: hidden;
+    cursor: pointer;
+    transition: .2s;
+}
+.card:hover {
+    background: var(--bg-card-hover);
 }
 .card + .card {
     margin-top: 1.642em;
@@ -224,6 +231,11 @@ input[type=checkbox]{
     padding: 1.714em 2.142em;
     border-radius: 8px;
     row-gap: 1.714em;
+    cursor: pointer;
+    transition: .2s;
+}
+.card-small:hover {
+    background-color: var(--bg-card-hover);
 }
 .card-small + .card-small {
     margin-top: 1rem;
