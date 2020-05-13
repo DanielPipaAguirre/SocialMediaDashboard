@@ -1,4 +1,4 @@
-import './css/styles.css';
+import './css/style.css';
 import './img/icon-facebook.svg';
 import './img/icon-twitter.svg';
 import './img/icon-instagram.svg';

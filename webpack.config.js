@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 module.exports = (env, argv) => {
     const devMode = argv.mode !== 'production';
@@ -9,6 +10,9 @@ module.exports = (env, argv) => {
         output: {
             path: __dirname + '/build',
             filename: 'bundle.js'
+        },
+        optimization: {
+            minimizer: [new OptimizeCssAssetsPlugin()]
         },
         devServer: {
             open: true,
@@ -20,7 +24,7 @@ module.exports = (env, argv) => {
                     test: /\.css$/,
                     use: [
                         { loader: devMode ? 'style-loader' : MiniCssExtractPlugin.loader },
-                        { loader: 'css-loader' },
+                        { loader: 'css-loader' }
                     ]
                 },
                 {
