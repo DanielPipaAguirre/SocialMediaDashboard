@@ -12,11 +12,6 @@
     --toggle-dark: linear-gradient(to right,hsl(210, 78%, 56%),hsl(146, 68%, 55%));
     --toggle-light: hsl(230, 22%, 74%);
     /* --> neutral */
-    --bg-dark: hsl(230, 17%, 14%);
-    --bg-top-dark: hsl(232, 19%, 15%);
-    --bg-card-dark: hsl(228, 28%, 20%);
-    --text-primary-dark: hsl(228, 34%, 66%);
-    --text-light-dark: hsl(0, 0%, 100%);
     --bg-light: hsl(0, 0%, 100%);
     --bg-top-light: hsl(225, 100%, 98%);
     --bg-card-light: hsl(227, 47%, 96%);
@@ -42,6 +37,15 @@ body {
     margin: 0;
     color: var(--text-primary-light);
     font-weight: var(--font-bold);
+    background-color: var(--bg-light);
+}
+
+body.is-dark {
+    --bg-light: hsl(230, 17%, 14%);
+    --bg-top-light: hsl(232, 19%, 15%);
+    --bg-card-light: hsl(228, 28%, 20%);
+    --text-primary-light: hsl(228, 34%, 66%);
+    --text-dark-light: hsl(0, 0%, 100%);
 }
 
 a:link {
@@ -107,7 +111,7 @@ input[type=checkbox]{
     background: var(--toggle-dark);
 }
 .toggle__checkbox:checked + .toggle__label::after {
-    background: var(--bg-top-dark);
+    background: var(--bg-top-light);
     transform: translateX(-23px);
 }
 .toggle__label {
@@ -246,3 +250,4 @@ input[type=checkbox]{
 .card-small__percentage > img {
     margin-right: 0.285em;
 }
+
