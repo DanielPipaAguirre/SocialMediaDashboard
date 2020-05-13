@@ -136,6 +136,7 @@ input[type=checkbox]{
     transition: .3s;
     will-change: transform;
 }
+
 /* Module: top-cards */
 .top-cards {
     margin-top: -2.857em;
@@ -251,3 +252,46 @@ input[type=checkbox]{
     margin-right: 0.285em;
 }
 
+/* Mode: Desktop */
+@media screen and (min-width: 480px){
+    /* Module: card */
+    .card + .card {
+        margin-top: 0;
+    }
+    /* Module: card-small */
+    .card-small + .card-small {
+        margin-top: 0;
+    }
+    /* Module: grid */
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.642em;
+    }
+}
+@media screen and (min-width: 1024px) {
+    /* Module: header */
+    .header__description {
+        border-bottom: none;
+    }
+    .header-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    /* Module: dark-mode */
+    .dark-mode {
+        justify-content: flex-end;
+        align-self: flex-start;
+    }
+    .dark-mode__title {
+        margin-right: 1rem;
+    }
+    /* Module: container */
+    .container {
+        padding: 0 11.571em;
+    }
+    /* Module: grid */
+    .grid {
+        gap: 2em;
+    }
+}
