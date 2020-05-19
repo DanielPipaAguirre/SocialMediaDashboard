@@ -1,2 +1,2 @@
-# Webpack-js-basic
-Configuración de Webpack para JS 🧪 
+# SocialMediaDashboard
+Social media dashboard with theme switcher - Frontend Mentor Challenge
