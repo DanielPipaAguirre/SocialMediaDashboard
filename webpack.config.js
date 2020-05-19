@@ -9,7 +9,8 @@ module.exports = (env, argv) => {
         entry: './src/app.js',
         output: {
             path: __dirname + '/build',
-            filename: 'bundle.js'
+            filename: 'bundle.js',
+            publicPath: "/SocialMediaDashboard/"
         },
         optimization: {
             minimizer: [new OptimizeCssAssetsPlugin()]
